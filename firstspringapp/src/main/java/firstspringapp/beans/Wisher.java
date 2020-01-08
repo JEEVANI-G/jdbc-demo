@@ -1,9 +1,11 @@
 package firstspringapp.beans;
 
-public class Wisher 
+public  class Wisher 
 {
 	String message;
- public Wisher() {}
+ public Wisher() {System.out.println("bean is created");}
+ 
+
  public void setMessage(String message)
  {
 	 this.message=message;
@@ -13,4 +15,13 @@ public class Wisher
 	 return message;
 	
  }
+ public void initWisher()
+ {
+	 System.out.println("bean is initialised");
+ }
+ public void destWisher()
+ {
+	 System.out.println("bean is destroyed");
+ }
+ 
 }

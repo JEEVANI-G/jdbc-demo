@@ -4,8 +4,18 @@
     xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
         
-<bean id="wish1" class="firstspringapp.beans.Wisher">
-<property name="message" value="hello world"/>
+ <bean id="wish1" class="firstspringapp.beans.Wisher" scope="prototype">
+<property name="message" value="hello world"/> 
 
+</bean>
+<bean id="add1" class="firstspringapp.beans.Address">
+<property name="hno" value="1-2-3"/> 
+<property name="city" value="vizag"/> 
+<property name="state" value="andhra pradesh"/> 
+</bean>
+<bean id="per1" class="firstspringapp.beans.Person">
+<property name="ssn" value="101"/> 
+<property name="name" value="vijay"/> 
+<property name="address" ref="add1"/> 
 </bean>
 </beans>
